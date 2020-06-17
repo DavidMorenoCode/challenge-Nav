@@ -1,6 +1,10 @@
 $colorPrimario: #636e72;
 $colorBotones: #6c5ce7;
 
+*{
+    transition: all 1s ;
+}
+
 #checkMenu {
     margin: 0;
     display: block;
@@ -39,28 +43,31 @@ $colorBotones: #6c5ce7;
         background-color: $colorBotones;
         color: white;
         text-align: center;
-        font-family: Arial, Helvetica, sans-serif;       
+        font-family: Arial, Helvetica, sans-serif;
     }
 }
+.menu-bar.primer-linea {
+    transform-origin: 0% 86%;
+}
 
-
+.menu-bar.segunda-linea {
+    transform-origin: 43% 100%;
+}
 #checkMenu:checked {
-    &~.menu-bar.primer-linea { 
-        transform: rotate(45deg);
-        transform-origin: 0% 0%;
+    &~.menu-bar.primer-linea {
+        transform: rotate(40deg);
     }
 }
 
 #checkMenu:checked {
     &~.menu-bar.segunda-linea { 
-        opacity: 0;
+        transform: rotate(-45deg);
     }
 }
 
 #checkMenu:checked {
     &~.menu-bar.tercer-linea { 
-        transform: rotate(-45deg);
-        transform-origin: -8% 78.5%;
+        opacity: 0;
     }
 }
 
